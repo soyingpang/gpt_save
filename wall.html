@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>壽司接接樂｜大牆端</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="wall-page">
+  <div class="wall-shell">
+    <header class="wall-topbar">
+      <div>
+        <p class="eyebrow">大型互動等待牆</p>
+        <h1>壽司接接樂</h1>
+      </div>
+      <div class="wall-stats">
+        <div class="stat-card compact">
+          <span>本局剩餘</span>
+          <strong id="timeLeftLabel">40</strong>
+        </div>
+        <div class="stat-card compact">
+          <span>分數</span>
+          <strong id="scoreLabel">0</strong>
+        </div>
+        <div class="stat-card compact">
+          <span>Combo</span>
+          <strong id="comboLabel">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="wall-layout">
+      <section class="wall-main-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>主遊戲區</h2>
+            <p>直接觸碰或拖曳牆面，左右移動托盤接住壽司。</p>
+          </div>
+          <div class="round-badge" id="roundState">回合進行中</div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+          <div class="board-grid"></div>
+          <div class="callout-banner" id="calloutBanner">目前可直接觸牆遊玩</div>
+          <div class="support-toast" id="supportToast">手機玩家支援已送達</div>
+          <div class="tray" id="tray"></div>
+          <div class="overlay-message" id="overlayMessage">
+            <div class="overlay-card">
+              <p class="overlay-eyebrow">等待區互動系統</p>
+              <h3>新一局已開始</h3>
+              <p>牆前主玩家可直接觸碰牆面控制托盤。手機玩家可掃碼加入同一局。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="wall-side-panel">
+        <section class="side-card queue-card">
+          <div class="section-title-row">
+            <h2>排隊資訊</h2>
+            <span class="pill">Mock Data</span>
+          </div>
+          <div class="queue-now">
+            <span>目前叫號</span>
+            <strong id="queueCurrent">A12</strong>
+          </div>
+          <div class="queue-next-list">
+            <div>
+              <span>即將到號</span>
+              <strong id="queueUpcoming">A13 - A15</strong>
+            </div>
+            <div>
+              <span>建議等待</span>
+              <strong id="queueWait">約 8 分鐘</strong>
+            </div>
+          </div>
+          <div class="queue-alert" id="queueAlert">
+            請留意叫號並準備入座
+          </div>
+        </section>
+
+        <section class="side-card join-card">
+          <div class="section-title-row">
+            <h2>QR code 加入提示區</h2>
+            <span class="pill accent" id="supportCountLabel">0 位支援玩家</span>
+          </div>
+          <div class="qr-box" aria-label="QR code placeholder">
+            <div class="qr-grid"></div>
+          </div>
+          <p class="join-copy">掃碼後開啟手機端頁面，送出普通壽司、加分壽司與支援效果。</p>
+          <div class="join-path-row">
+            <span>示範頁面</span>
+            <strong>mobile.html</strong>
+          </div>
+        </section>
+
+        <section class="side-card rule-card">
+          <h2>規則與公平說明</h2>
+          <ul class="rule-list">
+            <li>遊戲互動不影響排隊順位。</li>
+            <li>被叫號時可立即離開，不影響本局進行。</li>
+            <li>手機玩家可在原位置參與，不需聚集到牆前。</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="wall.js"></script>
+</body>
+</html>

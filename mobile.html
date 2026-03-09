@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>壽司接接樂｜手機端</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mobile-page">
+  <main class="mobile-shell">
+    <section class="mobile-screen active" id="screen-home">
+      <div class="mobile-card hero-mobile-card">
+        <p class="eyebrow">等待區手機參與端</p>
+        <h1>加入壽司接接樂</h1>
+        <p class="mobile-copy">
+          你將成為本局支援玩家，可用手機送出壽司與支援效果，協助牆前玩家得分。
+        </p>
+        <div class="mobile-note success-note">遊戲互動不影響排隊順位</div>
+        <button class="primary-btn full-width" id="joinBtn">開始加入</button>
+      </div>
+    </section>
+
+    <section class="mobile-screen" id="screen-waiting">
+      <div class="mobile-card">
+        <p class="eyebrow">已加入</p>
+        <h2>正在連線到同一局</h2>
+        <p class="mobile-copy">請留意大牆畫面，系統會在數秒後切換到支援操作頁。</p>
+        <div class="waiting-ring"></div>
+        <div class="countdown-chip">即將開始：<strong id="waitingCount">3</strong></div>
+      </div>
+    </section>
+
+    <section class="mobile-screen" id="screen-controls">
+      <div class="mobile-card mobile-status-card">
+        <div>
+          <p class="eyebrow">同一局支援中</p>
+          <h2>手機支援操作頁</h2>
+        </div>
+        <div class="round-mini-stats">
+          <div>
+            <span>剩餘</span>
+            <strong id="mobileTime">40</strong>
+          </div>
+          <div>
+            <span>本局分數</span>
+            <strong id="mobileScore">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-card control-card">
+        <button class="action-btn" data-action="spawn-normal" id="btnNormal">
+          <span>送出普通壽司</span>
+          <small>+10 基本得分</small>
+        </button>
+        <button class="action-btn accent-action" data-action="spawn-bonus" id="btnBonus">
+          <span>送出加分壽司</span>
+          <small>+25 高分機會</small>
+        </button>
+        <button class="action-btn" data-action="support-enlarge" id="btnEnlarge">
+          <span>啟動支援效果</span>
+          <small>托盤短暫放大</small>
+        </button>
+        <button class="action-btn" data-action="support-slow" id="btnSlow">
+          <span>清除壓力</span>
+          <small>壽司掉落暫時變慢</small>
+        </button>
+      </div>
+
+      <div class="mobile-card mobile-feedback-card">
+        <div class="feedback-row">
+          <span>支援玩家代號</span>
+          <strong id="playerCode">SP-000</strong>
+        </div>
+        <div class="feedback-row">
+          <span>最近支援</span>
+          <strong id="lastActionLabel">尚未送出支援</strong>
+        </div>
+        <div class="mobile-note">請同時留意現場叫號，隨時可離開本局。</div>
+      </div>
+    </section>
+
+    <section class="mobile-screen" id="screen-result">
+      <div class="mobile-card">
+        <p class="eyebrow">本局完成</p>
+        <h2>支援結果</h2>
+        <div class="result-box">
+          <div>
+            <span>本局總分</span>
+            <strong id="resultScore">0</strong>
+          </div>
+          <div>
+            <span>你的支援次數</span>
+            <strong id="resultSupportCount">0</strong>
+          </div>
+        </div>
+        <p class="mobile-copy" id="resultSummary">你已完成本局支援。</p>
+        <div class="result-actions">
+          <button class="primary-btn full-width" id="playAgainBtn">加入下一局</button>
+          <button class="ghost-btn full-width" id="leaveBtn">離開本局</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="mobile.js"></script>
+</body>
+</html>

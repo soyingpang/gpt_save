@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>壽司接接樂 Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing-page">
+  <main class="landing-wrap">
+    <section class="landing-card hero-card">
+      <p class="eyebrow">餐廳等待區互動系統 prototype</p>
+      <h1>壽司接接樂</h1>
+      <p class="lead">
+        一位牆前主玩家直接觸牆控制托盤接壽司，其他等待中的顧客以手機加入同一局，送出壽司與支援效果。
+      </p>
+      <div class="landing-actions">
+        <a class="primary-btn" href="wall.html">開啟大牆端</a>
+        <a class="secondary-btn" href="mobile.html">開啟手機端</a>
+      </div>
+    </section>
+
+    <section class="landing-grid">
+      <article class="landing-card">
+        <h2>專案結構</h2>
+        <ul class="file-list">
+          <li><strong>index.html</strong><span>入口頁</span></li>
+          <li><strong>wall.html</strong><span>大牆端畫面</span></li>
+          <li><strong>mobile.html</strong><span>手機端畫面</span></li>
+          <li><strong>style.css</strong><span>共用樣式</span></li>
+          <li><strong>wall.js</strong><span>大牆端遊戲邏輯</span></li>
+          <li><strong>mobile.js</strong><span>手機端互動邏輯</span></li>
+          <li><strong>README.md</strong><span>本地預覽說明</span></li>
+        </ul>
+      </article>
+
+      <article class="landing-card">
+        <h2>頁面清單</h2>
+        <ul class="page-list">
+          <li>大牆端：待機 / 進行中 / 回合結束 / 叫號提示</li>
+          <li>手機端：加入首頁 / 已加入等待頁 / 支援操作頁 / 結果頁</li>
+        </ul>
+      </article>
+
+      <article class="landing-card">
+        <h2>本地預覽</h2>
+        <ol class="step-list">
+          <li>解壓縮後進入資料夾。</li>
+          <li>直接雙擊 <strong>index.html</strong> 可先看靜態畫面。</li>
+          <li>要測試大牆端與手機端同步，建議用本地伺服器開啟。</li>
+          <li>同時開啟 <strong>wall.html</strong> 與 <strong>mobile.html</strong> 兩個頁面。</li>
+          <li>在手機端按下支援按鈕，即可看到大牆端同步變化。</li>
+        </ol>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
